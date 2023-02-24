@@ -64,7 +64,8 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         })
         
         // server -> listen -> port -> 3000
-        app.listen(3000, function() {
+    const PORT = process.env.PORT || 4000;
+        app.listen(PORT, function() {
             console.log('listening on 3000')
         })
     })
